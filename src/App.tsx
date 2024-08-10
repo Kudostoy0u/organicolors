@@ -5,6 +5,7 @@
   import About from './pages/About';
   import Contact from './pages/Contact';
   import Gallery from './pages/Gallery';
+  import Notfound from './pages/Notfound';
   import BottomBar from './components/BottomBar';
   import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
   import './App.css';
@@ -34,7 +35,8 @@
               }
             />
             {/* Separate Gallery Page */}
-            <Route path="*" element={<Gallery />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="*" element={<Notfound />} />
           </Routes>
           <BottomBar/>
         </div>
