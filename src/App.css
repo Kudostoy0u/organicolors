@@ -86,22 +86,23 @@ body {
   width: 100%;
   max-width: 100%;
 }
-/* src/App.css */
-.gallery-card img {
-  width: 100%;
-  height: 300px; /* Set the height as needed */
-  object-fit: cover; /* Ensure images cover the area without distortion */
-  transition: transform 0.3s ease-in-out;
-}
 
 .gallery-card {
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
-.gallery-card:hover img {
+.gallery-card.hover-effect img {
   transform: scale(1.1); /* Zoom effect */
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 300px; /* Set the height as needed */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  transition: transform 0.3s ease-in-out;
 }
 
 .overlay-content {
@@ -120,6 +121,36 @@ body {
 .gallery-card:hover .overlay-content {
   opacity: 1;
 }
+
+.gallery-card.hover-effect .overlay-content {
+  opacity: 1;
+}
+
+
+/* Modal Styles */
+.modal-content {
+  background-color: #333;
+  color: white;
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+.modal-footer .btn-primary {
+  margin-top: 10px;
+}
+
+
 
 /* Modal Styles */
 .modal-content {
