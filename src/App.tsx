@@ -18,7 +18,7 @@
           <Routes>
             {/* Main Page with Home, About, and Contact Sections */}
             <Route
-              path="/"
+              path="/h"
               element={
                 <>
                   <div id="home" className="section">
