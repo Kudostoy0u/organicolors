@@ -5,7 +5,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      setScrollY(document.documentElement.scrollTop || document.body.scrollTop || 0);
     };
 
     const intervalId = setInterval(handleScroll, 10); // Check every 10 milliseconds
