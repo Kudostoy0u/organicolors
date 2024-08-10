@@ -3,73 +3,85 @@
       "id": 1,
       "title": "Sunset Bliss",
       "description": "A beautiful sunset over the mountains.",
-      "image": "/sunset.jpg"
+      "image": "/sunset.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 2,
       "title": "Ocean Serenity",
       "description": "Calm waves at a tranquil beach.",
-      "image": "/beach.jpg"
+      "image": "/beach.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 3,
       "title": "Sunset Bliss",
       "description": "A beautiful sunset over the mountains.",
-      "image": "/sunset.jpg"
+      "image": "/sunset.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 4,
       "title": "Ocean Serenity",
       "description": "Calm waves at a tranquil beach.",
-      "image": "/beach.jpg"
+      "image": "/beach.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 5,
       "title": "Sunset Bliss",
       "description": "A beautiful sunset over the mountains.",
-      "image": "/sunset.jpg"
+      "image": "/sunset.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 6,
       "title": "Ocean Serenity",
       "description": "Calm waves at a tranquil beach.",
-      "image": "/beach.jpg"
+      "image": "/beach.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 7,
       "title": "Sunset Bliss",
       "description": "A beautiful sunset over the mountains.",
-      "image": "/sunset.jpg"
+      "image": "/sunset.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 8,
       "title": "Ocean Serenity",
       "description": "Calm waves at a tranquil beach.",
-      "image": "/beach.jpg"
+      "image": "/beach.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 9,
       "title": "Sunset Bliss",
       "description": "A beautiful sunset over the mountains.",
-      "image": "/sunset.jpg"
+      "image": "/sunset.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 10,
       "title": "Ocean Serenity",
       "description": "Calm waves at a tranquil beach.",
-      "image": "/beach.jpg"
+      "image": "/beach.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 11,
       "title": "Sunset Bliss",
       "description": "A beautiful sunset over the mountains.",
-      "image": "/sunset.jpg"
+      "image": "/sunset.jpg",
+      "author": "Gavin Wang"
     },
     {
       "id": 12,
       "title": "Ocean Serenity",
       "description": "Calm waves at a tranquil beach.",
-      "image": "/beach.jpg"
+      "image": "/beach.jpg",
+      "author": "Gavin Wang"
     }
   ]
   
