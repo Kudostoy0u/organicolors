@@ -2,23 +2,40 @@ import React, { useEffect, useState } from 'react';
 
 const Home: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(document.documentElement.scrollTop || document.body.scrollTop || 0);
+    // Determine if the user is on a mobile device by checking the window width
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < window.innerHeight); // You can adjust the breakpoint as needed
     };
 
-    const intervalId = setInterval(handleScroll, 10); // Check every 10 milliseconds
+    checkIsMobile(); // Check on initial load
+    window.addEventListener('resize', checkIsMobile); // Recheck on window resize
+
+    if (!isMobile) {    
+      window.addEventListener('scroll', handleScroll);
+    }
 
     return () => {
-      clearInterval(intervalId); // Clean up the interval on component unmount
+      window.removeEventListener('resize', checkIsMobile);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isMobile]);
 
-  const backgroundStyle = {
-    backgroundSize: `calc(100% + ${scrollY / 3}px) calc(100% + ${scrollY / 3}px)`,
-    transition: 'background-size 0.1s',
-  };    
+  const backgroundStyle = !isMobile
+    ? {
+        backgroundSize: `calc(100% + ${scrollY / 3}px) calc(100% + ${scrollY / 3}px)`,
+        transition: 'background-size 0.1s',
+      }
+    : {
+        // Static background style for mobile
+        backgroundSize: '100% 100%',
+      };
   return (
     <div className="home-section" style={backgroundStyle}>
       <div className="overlay"></div>
