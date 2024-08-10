@@ -27,7 +27,7 @@ const Gallery: React.FC = () => {
     setFrameSize('medium'); // Reset frame size when closing the modal
   };
 
-  const handleFrameSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleFrameSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFrameSize(event.target.value);
   };
 
