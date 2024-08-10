@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "title": "Sunset Bliss",
+      "description": "A beautiful sunset over the mountains.",
+      "image": "/sunset.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Ocean Serenity",
+      "description": "Calm waves at a tranquil beach.",
+      "image": "/beach.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Sunset Bliss",
+      "description": "A beautiful sunset over the mountains.",
+      "image": "/sunset.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Ocean Serenity",
+      "description": "Calm waves at a tranquil beach.",
+      "image": "/beach.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Sunset Bliss",
+      "description": "A beautiful sunset over the mountains.",
+      "image": "/sunset.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Ocean Serenity",
+      "description": "Calm waves at a tranquil beach.",
+      "image": "/beach.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Sunset Bliss",
+      "description": "A beautiful sunset over the mountains.",
+      "image": "/sunset.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Ocean Serenity",
+      "description": "Calm waves at a tranquil beach.",
+      "image": "/beach.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Sunset Bliss",
+      "description": "A beautiful sunset over the mountains.",
+      "image": "/sunset.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Ocean Serenity",
+      "description": "Calm waves at a tranquil beach.",
+      "image": "/beach.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Sunset Bliss",
+      "description": "A beautiful sunset over the mountains.",
+      "image": "/sunset.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Ocean Serenity",
+      "description": "Calm waves at a tranquil beach.",
+      "image": "/beach.jpg"
+    }
+  ]
+  
