@@ -97,7 +97,7 @@ const Gallery: React.FC = () => {
     <div className="gallery-section bg-dark text-light" ref={galleryRef}>
       <Container>
         <h2>Gallery</h2>
-        <p>Explore our collection of artwork.</p>
+        <p>Explore our collection of signed, framed, digital artwork, <br/>and support high school artists with your purchase.</p>
         <Row>{renderImageGrid()}</Row>
 
         {selectedItem && (
