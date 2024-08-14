@@ -129,6 +129,7 @@ const Gallery: React.FC = () => {
             </Modal.Footer>
           </Modal>
         )}
+        <br/><br/><br/><br/>
       </Container>
     </div>
   );
