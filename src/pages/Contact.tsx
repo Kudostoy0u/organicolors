@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Card, Form, Button, Alert } from 'react-bootstrap';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [status, setStatus] = useState<string | null>(null);
@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
           <Card.Body>
             <h3 className="mb-3">Contact Us</h3>
             <p>You can reach out to us to purchase artwork from our gallery or for any inquiries about the platform.</p>
-            <h5>Email: contact@organicolors.org</h5>
+            <h5>Email: organicolors8@gmail.com</h5>
 
             {status && <Alert variant={status.includes('successfully') ? 'success' : 'danger'}>{status}</Alert>}
 
