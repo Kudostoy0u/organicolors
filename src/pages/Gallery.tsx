@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Container, Row, Col, Card, Modal, Button, Form } from 'react-bootstrap';
+import { Container, Row, Col, Card, Modal, Button } from 'react-bootstrap';
 import galleryData from '../gallery.json';
 
 interface GalleryItem {
@@ -7,14 +7,13 @@ interface GalleryItem {
   title: string;
   description: string;
   image: string;
-  author: string; // Added author property
+  author: string; // kept in case you want to show author
 }
 
 const Gallery: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [visibleItemId, setVisibleItemId] = useState<number | null>(null);
-  const [frameSize, setFrameSize] = useState<string>('medium');
   const galleryRef = useRef<HTMLDivElement>(null);
 
   const handleImageClick = (item: GalleryItem) => {
@@ -24,11 +23,6 @@ const Gallery: React.FC = () => {
 
   const handleClose = () => {
     setShowModal(false);
-    setFrameSize('medium'); // Reset frame size when closing the modal
-  };
-
-  const handleFrameSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFrameSize(event.target.value);
   };
 
   const handleScroll = () => {
@@ -37,7 +31,7 @@ const Gallery: React.FC = () => {
       const galleryItems = galleryRef.current.querySelectorAll('.gallery-card');
       const viewportHeight = window.innerHeight;
       const viewportCenter = viewportHeight / 2;
-      const tolerance = 100; // Tolerance in pixels
+      const tolerance = 100;
 
       galleryItems.forEach((item) => {
         const rect = item.getBoundingClientRect();
@@ -54,7 +48,7 @@ const Gallery: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -80,52 +74,30 @@ const Gallery: React.FC = () => {
     ));
   };
 
-  const getFramePrice = (size: string): number => {
-    switch (size) {
-      case 'small':
-        return 7;
-      case 'medium':
-        return 12;
-      case 'large':
-        return 24;
-      default:
-        return 0;
-    }
-  };
-
   return (
     <div className="gallery-section bg-dark text-light" ref={galleryRef}>
       <Container>
         <h2>Gallery</h2>
-        <p>Explore our collection of signed, framed, digital artwork, and support<br/> the high school artists behind your purchase - Free shipping with all orders.</p>
+        <p>
+          Explore our collection of signed, framed, digital artwork, and support<br/>
+          the high school artists behind your purchase - Free shipping with all orders.
+        </p>
         <Row>{renderImageGrid()}</Row>
 
         {selectedItem && (
           <Modal data-bs-theme="dark" show={showModal} onHide={handleClose} centered className="modal-dark">
             <Modal.Header closeButton className="border-0">
-              <Modal.Title>{selectedItem.title}<span className="text-secondary h6">&nbsp;&nbsp;by {selectedItem.author}</span></Modal.Title>
-
+              <Modal.Title>
+                {selectedItem.title}
+                <span className="text-secondary h6">&nbsp;&nbsp;by {selectedItem.author}</span>
+              </Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <img src={selectedItem.image} alt={selectedItem.title} className="img-fluid mb-3" />
               <p>{selectedItem.description}</p>
-              <Form.Group controlId="frameSizeSelect">
-                <Form.Label>Select Frame Size:</Form.Label>
-                <Form.Control
-                  as="select"
-                  value={frameSize}
-                  onChange={handleFrameSizeChange}
-                  className="bg-dark text-light border-0"
-                >
-                  <option value="small">Small Frame - $7</option>
-                  <option value="medium">Medium Frame - $12</option>
-                  <option value="large">Large Frame - $24</option>
-                </Form.Control>
-              </Form.Group>
-              <h4 className="mt-3">Total Price: ${getFramePrice(frameSize)}</h4>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="dark">Buy Now</Button>
+              <Button variant="dark">Close</Button>
             </Modal.Footer>
           </Modal>
         )}
