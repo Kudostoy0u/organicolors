@@ -3,17 +3,35 @@ import { Container } from 'react-bootstrap';
 
 const About: React.FC = () => {
   return (
-    <div className="about-section text-start">
-      <Container className="container-sm w-50">
-        <br/><br/>
-        <h1 className="text-center text-lg-start">About Us</h1>
-        <br/>
-        <p className="text-center text-lg-start fs-6 fs-lg-5">
-          It doesn't matter if you copy one person's homework or copy a multitude of different homework and mix them into one, the end result is an unoriginal, pre-existing piece of work. However, the more serious issue is that what AI is copying is more than just homework, it is copying human art, created from experience, lessons, and emotions. <br/><br/>
-          As an online marketplace for real artworks done by students, we are inspired by the fact that art has always been a key indicator to showcase the historical situation no matter time. This is something that AI can not replicate as it lacks human creativity and visualization. As a group of high schoolers, we want to celebrate the variety of art everyone can create by showcasing them on this platform. <br/><br/>
-          We are determined to support and celebrate the artists in our community through acknowledging their works on this platform and paying them back with what they earned. The ultimate goal is to bring awareness to the unreplicable parts of the human mind and heart expressed through the multitude of art forms.
+    <div className="about-section text-start bg-dark text-light py-5">
+      <Container className="container-sm w-75">
+        <h1
+          className="text-center text-lg-start mb-4"
+          style={{ fontSize: '2.8rem', fontWeight: 700, fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
+        >
+          About Us
+        </h1>
+
+        <p
+          className="fs-5 mb-3"
+          style={{ lineHeight: '1.8rem', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
+        >
+          Copying homework or combining multiple sources produces <strong>unoriginal work</strong>. The bigger issue is that AI is now copying human art, which is created from <strong>experience, lessons, and emotion</strong>.
         </p>
-        <br/>
+
+        <p
+          className="fs-5 mb-3"
+          style={{ lineHeight: '1.8rem', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
+        >
+          <strong>Founded by Rishi Murali and Gavin Wang</strong>, our online marketplace celebrates authentic student artwork. We showcase the creativity of high school artists, provide recognition, and ensure they earn meaningful rewards for their work.
+        </p>
+
+        <p
+          className="fs-5 mb-3"
+          style={{ lineHeight: '1.8rem', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
+        >
+          To date, we have supported <strong>dozens of student artists</strong> and left a measurable impact on our local community. Our mission is to honor human creativity, amplify student voices through art, and inspire others to explore their own <strong>artistic potential</strong>.
+        </p>
       </Container>
     </div>
   );
