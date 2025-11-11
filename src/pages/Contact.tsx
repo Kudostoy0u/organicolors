@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
       'YTUe9cCdRb4JI_VGG-'   // replace with your EmailJS public key
     )
     .then(
-      (result) => {
+      () => {
         setStatus('Message sent successfully!');
         e.currentTarget.reset();
       },
