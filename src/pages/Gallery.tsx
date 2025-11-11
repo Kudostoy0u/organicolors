@@ -78,10 +78,12 @@ const Gallery: React.FC = () => {
     <div className="gallery-section bg-dark text-light" ref={galleryRef}>
       <Container>
         <h2>Gallery</h2>
-        <p>
-          Explore our collection of signed, framed, digital artwork, and support<br/>
-          the high school artists behind your purchase - Free shipping with all orders.
+        <p style={{ fontSize: '1.6rem', lineHeight: '2rem' }}>
+            <strong>Thank you for everyone's support!</strong> Over <u>50+ art pieces sold</u> and so many kind messages.
+            We <u>greatly cherish them</u> and are happy to <strong>show off</strong> and continue encouraging the local students
+            in exploring their own <u>artistic and creative capabilities</u>.
         </p>
+
         <Row>{renderImageGrid()}</Row>
 
         {selectedItem && (
@@ -89,7 +91,7 @@ const Gallery: React.FC = () => {
             <Modal.Header closeButton className="border-0">
               <Modal.Title>
                 {selectedItem.title}
-                <span className="text-secondary h6">&nbsp;&nbsp;by {selectedItem.author}</span>
+                <span className="text-secondary h6">&nbsp;&nbsp;</span>
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
