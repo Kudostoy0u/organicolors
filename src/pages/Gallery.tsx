@@ -4,11 +4,12 @@ import galleryData from '../gallery.json';
 
 interface GalleryItem {
   id: number;
-  title: string;
-  description: string;
   image: string;
-  author: string; // kept in case you want to show author
+  title?: string;
+  description?: string;
+  author?: string;
 }
+
 
 const Gallery: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
@@ -99,7 +100,7 @@ const Gallery: React.FC = () => {
               <p>{selectedItem.description}</p>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="dark">Close</Button>
+              <Button variant="dark" onClick={handleClose}>Close</Button>
             </Modal.Footer>
           </Modal>
         )}
